@@ -1,6 +1,6 @@
 # Личный проект «Кексобукинг»
 
-* Студент: [Sophie Sophievna](https://up.htmlacademy.ru/javascript/23/user/1560507).
+* Студент: [Марияяя](https://up.htmlacademy.ru/javascript/23/user/1560507).
 * Наставник: `Илья Лукьянов`.
 
 ---
