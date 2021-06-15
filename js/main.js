@@ -7,13 +7,13 @@ function returnRandomInteger(min, max){
   if (min < max) {
     return Math.round(randomInt);
   } else if (min === max){
-    alert("твой диапазон вовсе не диапазон :))");
+    return ('твой диапазон вовсе не диапазон :))');
   } else {
     return 0;
   }
 }
 
-alert(returnRandomInteger(3, 10));
+returnRandomInteger(3, 10);
 
 
 function returnRandomFloat(min, max){
@@ -24,11 +24,11 @@ function returnRandomFloat(min, max){
   if (min < max) {
     return randomFloat;
   } else if (min === max){
-    alert("твой диапазон вовсе не диапазон, стоит ли поправить ситуацию");
+    return('твой диапазон вовсе не диапазон, стоит ли поправить ситуацию');
   } else {
     return 0;
   }
 }
 
 
-alert(returnRandomFloat(3, 10));
+returnRandomFloat(3, 10);
