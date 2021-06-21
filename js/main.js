@@ -19,16 +19,20 @@ function returnRandomFloat(min, max, signAfterComma){
   if (min < 0) {
     return 'min не может быть меньше 0';
   }
+
   min = Math.abs(min);
   max = Math.abs(max);
-  const randomFloat = min + Math.random() * (max - min);
+
+  let randomFloat = min + Math.random() * (max - min);
+  randomFloat = randomFloat.toFixed(signAfterComma);
+
 
   if (min < max) {
     return randomFloat;
-  } else if ((min === max) || (min > max)) {
-  // если опускаю скобки,  тогда код подчеркнут красным
+  } else if (min >= max) {
+
     return 'твой диапазон вовсе не диапазон, стоит ли поправить ситуацию';
   }
 }
 
-returnRandomFloat(3, 10);
+returnRandomFloat(3, 10, 3);
