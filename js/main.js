@@ -15,7 +15,7 @@ function returnRandomInteger(min, max){
 
 returnRandomInteger(3, 10);
 
-function returnRandomFloat(min, max){
+function returnRandomFloat(min, max, signAfterComma){
   if (min < 0) {
     return 'min не может быть меньше 0';
   }
@@ -25,7 +25,8 @@ function returnRandomFloat(min, max){
 
   if (min < max) {
     return randomFloat;
-  } else if (min === max){
+  } else if ((min === max) || (min > max)) {
+  // если опускаю скобки,  тогда код подчеркнут красным
     return 'твой диапазон вовсе не диапазон, стоит ли поправить ситуацию';
   }
 }
