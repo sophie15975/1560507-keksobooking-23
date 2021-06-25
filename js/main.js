@@ -8,7 +8,7 @@ function returnRandomInteger(min, max){
 
   if (min < max) {
     return Math.round(randomInt);
-  } else if ((min === max) || (min > max)){
+  } else if ((min >= max)){
     return 'max должен быть больше, чем min';
   }
 }
@@ -31,7 +31,7 @@ function returnRandomFloat(min, max, signAfterComma){
     return randomFloat;
   } else if (min >= max) {
 
-    return 'твой диапазон вовсе не диапазон, стоит ли поправить ситуацию';
+    return 'твой диапазон вовсе не диапазон, стоит ли поправить ситуацию?';
   }
 }
 
