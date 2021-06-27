@@ -34,7 +34,7 @@ function returnRandomFloat(min, max, signAfterComma){
 
     return 'неверный диапазон';
   }
-};
+}
 
 
 const createRandomIntArray = function(){
@@ -75,7 +75,7 @@ const addressesArray = createAddressesArray();
 const buildAuthor = function(avatarAddress){
 
   return {
-    avatarAddress : avatarAddress
+    avatarAddress : avatarAddress,
   };
 };
 
@@ -164,5 +164,4 @@ const author9 = buildAuthor(addressesArray[9]);
 const offer9 = buildOffer('хостел на Достоевской', 'пр Владимирский, 2', returnRandomInteger(9000, 55000), 'flat', returnRandomInteger(1, 2),  returnRandomInteger(1, 25), '13:00', '12:00', ['washer'], 'в центре Питера, 2 шага до м. Достоевская', 'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/duonguyen-8LrGtIxxa4w.jpg');
 const locationn9 = buildLocation(returnRandomFloat(35.65000, 35.70000, 2), returnRandomFloat(139.70000, 139.80000, 2));
 const advertisment9 = buildAdvertisment(author9, offer9, locationn9);
-
 
