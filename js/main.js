@@ -41,15 +41,15 @@ const createRandomIntArray = function(){
   const randomIntArray = [];
   let randomInt;
 
-  for(let i = 0; i < 10; i++) {
+  for(let index = 0; index < 10; index++) {
     randomInt = returnRandomInteger(1, 10);
     if (randomInt !== 10) {
-      randomInt = '0' + randomInt;
+      randomInt = `0${randomInt}`;
     }
     if (!randomIntArray.includes(randomInt)){
       randomIntArray.push(randomInt);
     }
-    else { i--;
+    else { index--;
     }
 
   }
@@ -62,8 +62,8 @@ const createAddressesArray =  function(){
   const  array = createRandomIntArray();
 
   const avatarAddress = [];
-  for(let i = 0; i < 10; i++){
-    avatarAddress.push('img/avatars/user' + array[i]+ '.png') ;
+  for(let index = 0; index < 10; index++){
+    avatarAddress.push(`img/avatars/user${array[index]}.png`) ;
   }
   return avatarAddress;
 };
@@ -116,13 +116,13 @@ const buildAdvertisment = function(author, offer, locationn) {
 const author0 = buildAuthor(addressesArray[0]);
 const offer0 = buildOffer('квартира на Моховой', 'Моховая 12', returnRandomInteger(9000, 55000), 'flat', returnRandomInteger(1, 5),  returnRandomInteger(1, 25), '12:00', '14:00', ['wifi', 'dishwasher'], 'просторная, для 2-х человек', 'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/duonguyen-8LrGtIxxa4w.jpg');
 const locationn0 = buildLocation(returnRandomFloat(35.65000, 35.70000, 2), returnRandomFloat(139.70000, 139.80000, 0));
-const advertisment0 = buildAdvertisment(author0, offer0, locationn0);
+/*const advertisment0 = buildAdvertisment(author0, offer0, locationn0);*/
 
 
 const author1 = buildAuthor(addressesArray[1]);
 const offer1 = buildOffer('квартира на Ветеранов', 'пр.Ветеранов 135', returnRandomInteger(9000, 55000), 'flat', returnRandomInteger(1, 5),  returnRandomInteger(1, 25), '13:00', '14:00', ['wifi', 'washer'], 'можно с питомцами', 'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/duonguyen-8LrGtIxxa4w.jpg');
 const locationn1 = buildLocation(returnRandomFloat(35.65000, 35.70000, 1), returnRandomFloat(139.70000, 139.80000, 1));
-const advertisment1 = buildAdvertisment(author1, offer1, locationn1);
+/*const advertisment1 = buildAdvertisment(author1, offer1, locationn1);*/
 
 const author2 = buildAuthor(addressesArray[2]);
 const offer2 = buildOffer('квартира пл. Ленина', 'пл. Ленина 135', returnRandomInteger(9000, 55000), 'flat', returnRandomInteger(1, 5),  returnRandomInteger(1, 25), '13:00', '12:00', ['washer'], 'не подходит для младенцев', 'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/duonguyen-8LrGtIxxa4w.jpg');
