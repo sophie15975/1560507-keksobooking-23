@@ -72,9 +72,6 @@ const createAddressesArray =  function(){
 const addressesArray = createAddressesArray();
 
 const advertisementsArray = [];
-
-
-
 const buildAuthor = function(avatarAddress){
 
   return {
@@ -181,6 +178,6 @@ function createAdvertisementsArray(){
 
   return advertisementsArray;
 }
+createAdvertisementsArray();
 
-console.log(createAdvertisementsArray());
 
