@@ -39,9 +39,8 @@ function returnRandomFloat(min, max, signAfterComma){
 
 const createRandomIntArray = function(){
   const randomIntArray = [];
-  let randomInt;
-
   for(let index = 0; index < 10; index++) {
+    let randomInt;
     randomInt = returnRandomInteger(1, 10);
     if (randomInt !== 10) {
       randomInt = `0${randomInt}`;
@@ -57,7 +56,7 @@ const createRandomIntArray = function(){
   return randomIntArray;
 };
 
-const createAddressesArray =  function(){
+const createAvatarsArray =  function(){
   const  array = createRandomIntArray();
   const avatarAddress = [];
   for(let index = 0; index < 10; index++){
@@ -140,7 +139,7 @@ const createLngArray = function(){
 
 
 function createAdvertismentsArray(){
-  const addressesArray = createAddressesArray();
+  const addressesArray = createAvatarsArray();
 
   const titlesArray = ['квартира на Моховой', 'квартира на Ветеранов', 'хостел на Достоевской', 'квартира пл. Ленина', 'хостел на Фонтанке', 'хостел на Достоевской', 'Друзья на Невском', 'двушка на Ваське', 'Можно с животными', 'сдается студия'];
   const pricesArray =  createPricesArray();
