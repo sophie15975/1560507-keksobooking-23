@@ -66,14 +66,6 @@ const createAvatarsArray =  function(){
 };
 
 
-const createPricesArray = function(){
-  const pricesArray = [];
-  for(let index = 0; index < 10; index++){
-    pricesArray[index] = returnRandomInteger(9000, 55000);
-  }
-  return pricesArray;
-};
-
 const createFeaturesArray = function(){
   const features = ['wifi', 'dishwasher', 'parking', 'washer', 'elevator', 'conditioner'];
   const featuresArray = [];
@@ -95,29 +87,29 @@ const createFeaturesArray = function(){
 
 };
 
-const createPhotoesArray = function(){
-  const photoes = [
+const createPhotosArray = function(){
+  const photos = [
     'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/duonguyen-8LrGtIxxa4w.jpg',
     'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/brandon-hoogenboom-SNxQGWxZQi0.jpg',
     'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/claire-rendall-b6kAwr1i0Iw.jpg',
   ];
-  const photoesArray = [];
+  const photosArray = [];
   for(let index = 0; index < 10; index++){
     const newArray = [];
     newArray.length = returnRandomInteger(1, 3);
     for(let iks = 0; iks < newArray.length; iks++){
       const random = returnRandomInteger(0, 2);
-      if(!newArray.includes(photoes[random])){
-        newArray[iks] = photoes[random];
+      if(!newArray.includes(photos[random])){
+        newArray[iks] = photos[random];
       }
       else {
         iks--;
       }
     }
-    photoesArray[index] = newArray;
+    photosArray[index] = newArray;
   }
 
-  return photoesArray;
+  return photosArray;
 };
 
 
@@ -139,23 +131,22 @@ const createLngArray = function(){
 
 
 function createAdvertismentsArray(){
-  const addressesArray = createAvatarsArray();
+  const avatarsArray = createAvatarsArray();
 
   const titlesArray = ['квартира на Моховой', 'квартира на Ветеранов', 'хостел на Достоевской', 'квартира пл. Ленина', 'хостел на Фонтанке', 'хостел на Достоевской', 'Друзья на Невском', 'двушка на Ваське', 'Можно с животными', 'сдается студия'];
-  const pricesArray =  createPricesArray();
   const typesArray = ['palace', 'flat', 'house', 'bungalow', 'hotel'];
   const checkinArray =  ['12:00', '13:00', '14:00'];
   const checkoutArray = ['12:00', '13:00', '14:00'];
   const featuresArray = createFeaturesArray();
   const descriptionArray = ['просторная, для 2-х человек', 'можно с питомцами', 'в центре Питера, 2 шага до м. Достоевская', 'не подходит для младенцев', 'не подходит для одиноких мужчин', 'нельзя курить', '5 минут до Дворцовой площиди', 'уютная студия в 5 минутах от метро', 'сдается впервые после ремонта', '2-комнатая квартира с прекрасным видом на Исаакий'];
-  const photoesArray = createPhotoesArray();
+  const photosArray = createPhotosArray();
   const latArray = createLatArray();
   const lngArray = createLngArray();
   const advertismentsArray = [];
   for(let index = 0; index < 10; index++){
     const advertisment = {
       author:{
-        avatar : addressesArray[index],
+        avatar : avatarsArray[index],
       },
       location:{
         lat : latArray[index],
@@ -164,19 +155,16 @@ function createAdvertismentsArray(){
       },
       offer:{
         titel : titlesArray[index],
-        address : {
-          lat : latArray[index],
-          lng : lngArray[index],
-        },
-        price : pricesArray[index],
-        type : typesArray[returnRandomInteger(0,4)],
+        address :`${latArray[index]}, ${lngArray[index]}`,
+        price : returnRandomInteger(9000, 55000),
+        type : typesArray[returnRandomInteger(0, typesArray.length)],
         rooms : returnRandomInteger(1,5),
-        gusts : returnRandomInteger(1,25),
+        guests : returnRandomInteger(1,25),
         checkin : checkinArray[returnRandomInteger(0, (checkinArray.length-1))],
         checkout : checkoutArray[returnRandomInteger(0, (checkinArray.length-1))],
         features : featuresArray[index],
         description : descriptionArray[index],
-        photos : photoesArray[index],
+        photos : photosArray[index],
 
       },
     };
@@ -186,6 +174,6 @@ function createAdvertismentsArray(){
   return advertismentsArray;
 
 }
-
 createAdvertismentsArray();
+
 
