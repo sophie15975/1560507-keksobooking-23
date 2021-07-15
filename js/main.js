@@ -1,3 +1,3 @@
 
 import {createAdvertismentsArray} from './createAdvertismentsArray.js';
-createAdvertismentsArray();
+console.log(createAdvertismentsArray()) ;

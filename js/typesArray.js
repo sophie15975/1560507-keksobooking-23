@@ -1,4 +1,2 @@
 
-const typesArray = ['palace', 'flat', 'house', 'bungalow', 'hotel'];
-
-export {typesArray};
+export const typesArray = ['palace', 'flat', 'house', 'bungalow', 'hotel'];
