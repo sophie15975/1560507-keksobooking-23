@@ -29,7 +29,7 @@ export function createAdvertismentsArray(){
 
       },
       offer:{
-        titel : titlesArray[index],
+        title : titlesArray[index],
         address :`${latArray[index]}, ${lngArray[index]}`,
         price : returnRandomInteger(9000, 55000),
         type : typesArray[returnRandomInteger(0, typesArray.length-1)],

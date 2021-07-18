@@ -1,3 +1,6 @@
+import {generateAdPosition} from './generateAdPosition.js';
 
-import {createAdvertismentsArray} from './createAdvertismentsArray.js';
-console.log(createAdvertismentsArray()) ;
+const adPositionArray = generateAdPosition();
+console.log(adPositionArray);
+const mapCanvas = document.querySelector('#map-canvas');
+mapCanvas.appendChild(adPositionArray[0]);
